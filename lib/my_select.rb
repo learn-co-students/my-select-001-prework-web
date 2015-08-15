@@ -1,3 +1,22 @@
+
+def my_select(arr) # put argument(s) here
+  	arr_new = []
+	iter = 0
+	while iter < arr.length
+		i = arr[iter]
+		arr_new << arr[iter] if yield(i)
+		iter += 1
+	end
+	return arr_new
+end
+
+=begin
+array = [1, 2, 3, 4]
+my_select(array) do |i|
+    i.even?
+end
+
+
 require 'pry'
 
 def my_select(collection)
@@ -13,3 +32,4 @@ def my_select(collection)
 	end
 	selection
 end
+=end
