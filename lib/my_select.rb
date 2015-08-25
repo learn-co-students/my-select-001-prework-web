@@ -10,7 +10,7 @@ def my_select(collection)
 			end
 			i+=1
 		end
-	elsif collection.length == 0
+	elsif collection.length == nil
 	end
 	selection
 end
