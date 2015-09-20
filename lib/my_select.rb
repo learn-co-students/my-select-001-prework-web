@@ -1,11 +1,12 @@
- def my_select(collection)    
-    index = 0
-   until index >= collection.length
-    i = collection
-    if yield(i[index]) == true
-     collection_results << i[index]
+def my_select(collection)
+  x = 0
+  while collection[x] != nil
+    if yield(collection[x]) == true
+      new_collection << collection[x]
     end
-    index += 1
+    x += 1
   end
-  collection_results
-end   
+  new_collection
+ end  
+
+     
