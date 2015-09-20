@@ -1,3 +1,11 @@
-def my_select(collection)
- # your code here!
-end
+ def my_select(collection)    
+    index = 0
+   until index >= collection.length
+    i = collection
+    if yield(i[index]) == true
+     collection_results << i[index]
+    end
+    index += 1
+  end
+  collection_results
+end   
