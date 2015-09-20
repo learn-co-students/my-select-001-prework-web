@@ -1,12 +1,15 @@
 def my_select(collection)
-  x = 0
-  while collection[x] != nil
-    if yield(collection[x]) == true
-      new_collection << collection[x]
+    new_array=[]
+    num = 0
+    while num < collection.length
+        if yield(collection[num])== true
+            new_array.push(collection[num])
+            num+=1
+        else
+            num+=1
+        end
     end
-    x += 1
-  end
-  new_collection
- end  
+    new_array
+end  
 
      
