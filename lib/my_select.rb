@@ -1,4 +1,11 @@
 def my_select(collection)
  # your code here!
- collection.select{|x| x.even?}
+  output=[]
+  collection.each do |x|
+     v = yield x 
+    if v == true
+      output.push(x)
+    end
+  end
+  return output
 end
