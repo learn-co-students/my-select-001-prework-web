@@ -14,7 +14,3 @@ def my_select(collection)
   end
 end
 
-array = [1, 2, 3, 4]
-my_select(array) do |num|
-  num.even?
-end
