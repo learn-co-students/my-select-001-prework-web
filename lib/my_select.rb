@@ -10,6 +10,11 @@ def my_select(collection)
     end
     select_array
   else
-    "this collection is empty"
+    "This collection is empty."
   end
+end
+
+array = [1, 2, 3, 4]
+my_select(array) do |num|
+  num.even?
 end
