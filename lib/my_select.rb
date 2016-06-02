@@ -1,3 +1,5 @@
 def my_select(collection)
- # your code here!
+if block_given?
+ collection.select {|x| yield(x)}
+  end
 end
