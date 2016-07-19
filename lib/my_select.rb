@@ -1,8 +1,11 @@
 def my_select(array)
+    arr = []
     i = 0
     while i < array.length
-      yield(array[i])
-      i.even?
+      if yield(array[i])
+        arr << array[i]
+      end
+      i += 1
     end
-    array
+    arr
 end
