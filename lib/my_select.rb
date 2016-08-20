@@ -2,7 +2,6 @@ def my_select(collection)
 emptyArray = []
 collection.select { |nums|  nums.even? }#=> [2, 4]
 end
-#OK, I really am proud that I did this one.
 #Stepping through: You defined a method that takes an argument "collection"
 #it yields the correct element |nums|
 #it uses .select to select and return the elements, not the index, but the elements |nums| that are even
