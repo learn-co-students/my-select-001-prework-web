@@ -1,12 +1,11 @@
-def my_select(collection)
- # your code here!
- i = 0
- new_collection = []
- while i < collection.length
-   if yield(collection[i])
-     new_collection << collection[i]
-   end
-   i = i + 1
- end
- new_collection
+def my_select(arr)
+  counter = 0
+  new_arr = []
+  while counter < arr.length
+    if (yield arr[counter])
+      new_arr << (arr[counter])
+    end
+    counter += 1
+  end
+  new_arr
 end
