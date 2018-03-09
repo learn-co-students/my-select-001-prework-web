@@ -1,3 +1,7 @@
 def my_select(collection)
- # your code here!
+ arr = []
+ for num in collection
+  arr << num if (yield num) == true
+  end
+ arr
 end
